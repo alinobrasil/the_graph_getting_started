@@ -1,6 +1,8 @@
 # The Graph 
 
-Getting historical data on a smart contract can be frustrating when building a dapp. [The Graph](https://thegraph.com/) provides an easy way to query smart contract data through APIs known as subgraphs. The Graph’s infrastructure relies on a decentralized network of indexers, enabling your dapp to become truly decentralized.
+Getting historical data on a smart contract can be frustrating when building a dapp. [The Graph](https://thegraph.com/) provides an easy way to query smart contract data through APIs known as subgraphs. The Graph’s infrastructure relies on a network of indexers, enabling your dapp to become truly decentralized.
+
+Chiliz mainnet and testnet are both supported by The Graph.
 
 ## Quick Start
 
@@ -25,7 +27,7 @@ Go to the [Subgraph Studio](https://thegraph.com/studio/) and connect your walle
 
 You will then land on your subgraph’s page. All the CLI commands you need will be visible on the right side of the page:
 
-![CLI commands](https://lh7-us.googleusercontent.com/docsz/AD_4nXe3YvCxiOH_LupSWe8zh9AmP-VrV4PlOq3f7Ix6hNlBUYcANUFuLuVIWR74OGiBs0nrugTyT0v3o6RPmTsgHONdv_ZJNWtcDWEkRntXPHlQGFcqmEBa-D6j4aoIPzUKYdOJMVUPu8O3fwjdZ4IaXXZoTzY?key=fnI6SyFgXU9SZRNX5C5vPQ)
+![CLI commands](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F0b761b1d-eab9-4a3e-bc1c-4a431a442dc2%2Fimage.png/size/w=2000?exp=1728484304&sig=HRhmId-tkL0CALI9y8EJolIaaCaIkYIvK0ixo20MzAE)
 
 
 ### Install the Graph CLI⁠
@@ -79,14 +81,10 @@ You can test your subgraph by making a sample query in the playground section. T
 
 Once your subgraph is ready to be put into production, you can publish it to the decentralized network. On your subgraph’s page in Subgraph Studio, click on the Publish button:
 
-![publish button](https://edgeandnode.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F2f9c4526-123d-4164-8ea8-39959c8babbf%2FUntitled.png?table=block&id=37005371-76b4-4780-b044-040a570e3af6&spaceId=a7d6afae-8784-4b15-a90e-ee8f6ee007ba&width=1420&userId=&cache=v2)
+![publish button](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F7392b008-84d1-45be-acba-f63207f7314d%2Fimage.png/size/w=2000?exp=1728485541&sig=kOyYfWpz3DrIk51_Fg6vc3bWDDBeWFKoNbF15w9ggOk)
 
 
-Before you can query your subgraph, Indexers need to begin serving queries on it. In order to streamline this process, you can curate your own subgraph using GRT.
 
-When publishing, you’ll see the option to curate your subgraph. As of May 2024, it is recommended that you curate your own subgraph with at least 3,000 GRT to ensure that it is indexed and available for querying as soon as possible.
-
-![Publish screen](https://lh7-us.googleusercontent.com/docsz/AD_4nXerUr-IgWjwBZvp9Idvz5hTq8AFB0n_VlXCzyDtUxKaCTANT4gkk-2O77oW-a0ZWOh3hnqQsY7zcSaLeCQin9XU1NTX1RVYOLFX9MuVxBEqcMryqgnGQKx-MbDnOWKuMoLBhgyVWQereg3cdWtCPcTQKFU?key=fnI6SyFgXU9SZRNX5C5vPQ)
 
 > **Note:** The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Ethereum, BSC or any other [supported chain](https://thegraph.com/docs/en/developing/supported-networks/). 
 
