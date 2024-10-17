@@ -2,6 +2,8 @@
 
 Getting historical data on a smart contract can be frustrating when building a dapp. [The Graph](https://thegraph.com/) provides an easy way to query smart contract data through APIs known as subgraphs. The Graph’s infrastructure relies on a decentralized network of indexers, enabling your dapp to become truly decentralized.
 
+Both Kaia Mainnet & Testnet are supported by The Graph. 
+
 ## Quick Start
 
 These subgraphs only take a few minutes to set up. To get started, follow these three steps:
@@ -10,7 +12,9 @@ These subgraphs only take a few minutes to set up. To get started, follow these 
 2. Deploy & Publish
 3. Query from your dapp
 
-Pricing: **All developers receive 100K free queries per month on the decentralized network**. After these free queries, you only pay based on usage at $4 for every 100K queries.
+Pricing:
+ - The rate-limited test endpoints in Studio are free.
+ - API calls for the decentralized network are pay-per-use at $4 per 100K queries. The first 100K queries are free!
 
 Here’s a step by step walk through:
 
@@ -92,7 +96,7 @@ Once your subgraph is ready to be put into production, you can publish it to the
 ![publish button](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F8af650f5-03da-4dc2-b5ca-a5542ae2ca4a%2Fimage.png/size/w=2000?exp=1729260329&sig=Tqb7w1WpU1xSzlt5OfLQedDM8F47c5kUivzb3_KnuZY)
 
 > **Note:** 
-> - Kaia shows as "partially supported" for now because a final on-chain voting process has not been completed yet. For now, Edge & Node's Indexer (Upgrade Indexer) will be the only indexer supporting all Kaia subgraphs. 
+> - Kaia shows as "partially supported" for now because a final on-chain voting process to unlock rewards for indexers has not been completed yet. For now, Edge & Node's Indexer (Upgrade Indexer) will be the only indexer supporting all Kaia subgraphs. 
 > - The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Kaia, Ethereum or any other [supported chain](https://thegraph.com/docs/en/developing/supported-networks/). 
 
 ## 3. Query your Subgraph
