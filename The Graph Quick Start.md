@@ -25,7 +25,7 @@ Go to the [Subgraph Studio](https://thegraph.com/studio/) and connect your walle
 
 You will then land on your subgraph’s page. All the CLI commands you need will be visible on the right side of the page:
 
-![CLI commands](https://lh7-us.googleusercontent.com/docsz/AD_4nXe3YvCxiOH_LupSWe8zh9AmP-VrV4PlOq3f7Ix6hNlBUYcANUFuLuVIWR74OGiBs0nrugTyT0v3o6RPmTsgHONdv_ZJNWtcDWEkRntXPHlQGFcqmEBa-D6j4aoIPzUKYdOJMVUPu8O3fwjdZ4IaXXZoTzY?key=fnI6SyFgXU9SZRNX5C5vPQ)
+![CLI commands](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2Fe70242a2-6cca-4e5a-b1cd-533235d03ee4%2Fimage.png/size/w=2000?exp=1729259065&sig=zt1PcvL_bYKSu02o9Yzbys1OjoT43IFjAPgsAE2K8q0)
 
 
 ### Install the Graph CLI⁠
@@ -43,10 +43,20 @@ graph init --studio <SUBGRAPH_SLUG>
 ```
 You’ll be prompted to provide some info on your subgraph like this:
 
-![cli sample](https://lh7-us.googleusercontent.com/docsz/AD_4nXdTAUsUb5vbs3GtCrhKhuXM1xYoqqooYTxw6lfJfYtLJNP8GKVOhTPmjxlM1b6Qpx-pXNVOzRuc8BL12wZXqy4MIj8ja0tp15znfuJD_Mg84SSNj3JpQ4d31lNTxPYnpba4UOzZx8pmgOIsbI7vCz70v9gC?key=fnI6SyFgXU9SZRNX5C5vPQ)
+![cli sample](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F70d213c8-6ced-4bf7-a554-1e8a3079b1f5%2Fimage.png/size/w=2000?exp=1729259105&sig=20QQ_HoguPBol4ydMAZMQufEJVV1bJhdbiNPHcMkAYI)
 
 
-Simply have your contract verified on the block explorer and the CLI will automatically obtain the ABI and set up your subgraph. The default settings will generate an entity for each event.
+After entering the contract info, the graph-cli will attempt to fetch ABI, StartBLock & Contract name from the blockexplorer API. 
+
+However, KaiaScan's API is not ready yet, so when asked to retry, just say "no". Here's how to obtain these manually:
+
+1. ABI: You need to prepare a json file containing the ABI in the same directory where you're running `graph init`. From the [contract's page on Kaiascan](https://kaiascan.io/address/0x5096db80b21ef45230c9e423c373f1fc9c0198dd), go to the `Contract` tab, click `View Code` and you'll be able to copy the ABI. Save it as a json file in the same folder where you're running  `graph init`. In this screenshot above, it was saved as `abi.json`. 
+![Finding ABI](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2Fa19b1eac-ad67-43a8-8797-69c04b5aa64c%2Fimage.png/size/w=2000?exp=1729259815&sig=S5QIlImvJpLMi5TkScm9FNeGmy8pRd19kpVQQ2K050A)
+
+2. Start Block: Click into the transaction hash where the contract was created. There you'll find the block where the contract was created. 
+![contract creation](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F1b4efee8-e3ab-449f-aa28-74bc975c3d10%2Fimage.png/size/w=2000?exp=1729260164&sig=qDeA0COvNQPqx-7JiLnZiL7ngM3OLRSMyPP-vcu2_RI)
+
+3. Contract Name: Just type in the name of the contract. If this is the only contract you're indexing in this subgraph, it's OK to just go with the default `Contract`. 
 
 ## 2. Deploy & Publish
 
@@ -79,16 +89,11 @@ You can test your subgraph by making a sample query in the playground section. T
 
 Once your subgraph is ready to be put into production, you can publish it to the decentralized network. On your subgraph’s page in Subgraph Studio, click on the Publish button:
 
-![publish button](https://edgeandnode.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F2f9c4526-123d-4164-8ea8-39959c8babbf%2FUntitled.png?table=block&id=37005371-76b4-4780-b044-040a570e3af6&spaceId=a7d6afae-8784-4b15-a90e-ee8f6ee007ba&width=1420&userId=&cache=v2)
+![publish button](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F8af650f5-03da-4dc2-b5ca-a5542ae2ca4a%2Fimage.png/size/w=2000?exp=1729260329&sig=Tqb7w1WpU1xSzlt5OfLQedDM8F47c5kUivzb3_KnuZY)
 
-
-Before you can query your subgraph, Indexers need to begin serving queries on it. In order to streamline this process, you can curate your own subgraph using GRT.
-
-When publishing, you’ll see the option to curate your subgraph. As of May 2024, it is recommended that you curate your own subgraph with at least 3,000 GRT to ensure that it is indexed and available for querying as soon as possible.
-
-![Publish screen](https://lh7-us.googleusercontent.com/docsz/AD_4nXerUr-IgWjwBZvp9Idvz5hTq8AFB0n_VlXCzyDtUxKaCTANT4gkk-2O77oW-a0ZWOh3hnqQsY7zcSaLeCQin9XU1NTX1RVYOLFX9MuVxBEqcMryqgnGQKx-MbDnOWKuMoLBhgyVWQereg3cdWtCPcTQKFU?key=fnI6SyFgXU9SZRNX5C5vPQ)
-
-> **Note:** The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Ethereum, BSC or any other [supported chain](https://thegraph.com/docs/en/developing/supported-networks/). 
+> **Note:** 
+> - Kaia shows as "partially supported" for now because a final on-chain voting process has not been completed yet. For now, Edge & Node's Indexer (Upgrade Indexer) will be the only indexer supporting all Kaia subgraphs. 
+> - The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Kaia, Ethereum or any other [supported chain](https://thegraph.com/docs/en/developing/supported-networks/). 
 
 ## 3. Query your Subgraph
 
