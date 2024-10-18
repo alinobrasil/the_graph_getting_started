@@ -10,7 +10,9 @@ These subgraphs only take a few minutes to set up. To get started, follow these 
 2. Deploy & Publish
 3. Query from your dapp
 
-Pricing: **All developers receive 100K free queries per month on the decentralized network**. After these free queries, you only pay based on usage at $4 for every 100K queries.
+Pricing:
+ - The rate-limited test endpoints in Studio are free.
+ - API calls for the decentralized network are pay-per-use at $4 per 100K queries. **The first 100K queries are free!**
 
 Here’s a step by step walk through:
 
