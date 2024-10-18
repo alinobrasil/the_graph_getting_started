@@ -31,7 +31,7 @@ Go to the [Subgraph Studio](https://thegraph.com/studio/) and connect your walle
 You will then land on your subgraph’s page. 
 All the CLI commands you need will be visible on the right side of the page:
 
-![CLI commands](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F1d220c36-6423-4483-bb50-d5df8255235a%2Fimage.png/size/w=2000?exp=1728744839&sig=8CFI7XQCGQz0RSVJ_l-wa8Pt2vuxIYjzmiiyQYxunUU)
+![CLI commands](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/chiliz/img/studio-cli-commands.webp)
 
 
 ### Install the Graph CLI⁠
@@ -55,7 +55,7 @@ graph init psg-token
 
 You’ll be prompted to provide some info on your subgraph like this:
 
-![cli sample](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F89db2aa6-7716-4d17-906f-aed2ea8f99a4%2Fimage.png/size/w=2000?exp=1728745054&sig=pOXJDy1D8Qmlwcpg_njRF1_YQAWz-DcJkPYzQb05tPs)
+![cli sample](https://github.com/alinobrasil/the_graph_getting_started/raw/refs/heads/chiliz/img/cli-sample-output.webp)
 
 
 Simply have your contract verified on the block explorer and the CLI will automatically obtain the ABI and set up your subgraph. The default settings will generate an entity for each event. 
@@ -63,11 +63,10 @@ Simply have your contract verified on the block explorer and the CLI will automa
 Note:
 - If the contract uses a proxy like PSG Token, then use the implementation contract's address instead. You'll see it in the "read contract" tab on the block explorer page of the contract.
 - If the Start Block isn't automatically obtained, you can manually enter the block number where the contract was created. You can obtain this from the block explorer:
-
-![Contract creation block number](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F6aefc8ad-a18a-4c84-a2d9-9ee1bf4b6752%2Fimage.png/size/w=2000?exp=1728745338&sig=d4k0rtjXpOlHNQ1oya_kvgX-EBHYjn33Pwr4exfhWBI)
+![Contract creation block number](https://github.com/alinobrasil/the_graph_getting_started/raw/refs/heads/chiliz/img/chiliz-scan.webp)
 
 If you had to enter a proxy's implementation contract address like above, then once the project is set up, go to the manifeset file (subgraph.yaml) and change the contract address to the proxy's address
-![Contract address](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2Ffdeec47c-e18a-4bd9-91bd-cf536fcea813%2Fimage.png/size/w=2000?exp=1728744597&sig=1kMC2XbNOsOhYRlXZfh5oLIO19HcpOnK_Q3U_Gwcq3w)
+![Contract address](https://github.com/alinobrasil/the_graph_getting_started/raw/refs/heads/chiliz/img/update-manifest-address.webp)
 
 
 
@@ -91,20 +90,20 @@ $ graph deploy --studio <SUBGRAPH_SLUG>
 
 You will be asked for a version label. You can enter something like v0.0.1, but you’re free to choose the format. Once that's done, you'll see the subgraph start to sync in the Studio page:
 
-![Subgraph syncing in studio](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F27b7eb58-41de-4c7c-ade3-3a429bd93797%2Fimage.png/size/w=2000?exp=1728745700&sig=eVcYHhWUA0LXTResSmTh7YaTLvNO30EaB6n5pjkY62A)
+![Subgraph syncing in studio](https://github.com/alinobrasil/the_graph_getting_started/raw/refs/heads/chiliz/img/subgraph-deployed.webp)
 
 ### Test your subgraph⁠
 
 You can test your subgraph by making a sample query in the playground section. The Details tab will show you an API endpoint. You can use that endpoint to test from your dapp.
 
-![Playground](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F23fd2a88-be6e-4853-9153-c0d6b797acd1%2Fimage.png/size/w=2000?exp=1728745786&sig=-6T95mVnrpvsetwhI_l4aUTfzQfqUe73Kelhn2944pc)
+![Playground](https://github.com/alinobrasil/the_graph_getting_started/raw/refs/heads/chiliz/img/playground.webp)
 
 
 ### Publish Your Subgraph to The Graph’s Decentralized Network
 
 Once your subgraph is ready to be put into production, you can publish it to the decentralized network. On your subgraph’s page in Subgraph Studio, click on the Publish button:
 
-![publish button](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2F24dae205-303e-4867-bf56-b24dc23232f0%2Fimage.png/size/w=2000?exp=1728745855&sig=lUl8t4Vr8adU0fzUiSUpLSAAhovlbtxzY29GRZNBKJQ)
+![publish button](https://github.com/alinobrasil/the_graph_getting_started/raw/refs/heads/chiliz/img/publish-button.webp)
 It'll trigger a transaction through your wallet to publish your subgraph as an NFT on the Arbitrum One network. 
 
 
@@ -120,7 +119,7 @@ For any subgraph on the decentralized network, you can start querying it by pass
 
 The PSG Token subgraph above was [published here](https://thegraph.com/explorer/subgraphs/7x2xzF58Mr694MiAQxCK6fiXux1vaBQm5SdYhbv1LNGE?view=Query&chain=arbitrum-one):
 
-![Query URL](https://img.notionusercontent.com/s3/prod-files-secure%2Fa7d6afae-8784-4b15-a90e-ee8f6ee007ba%2Fe9a98e76-1a1d-47e5-bb4e-4ff3172f6bba%2Fimage.png/size/w=2000?exp=1728746559&sig=Wrg4GNAZDFIzliEAV8JTKAUWgRZNsd-ZiNcW9A9tC3Q)
+![Query URL](https://github.com/alinobrasil/the_graph_getting_started/raw/refs/heads/chiliz/img/explorer-query-url.webp)
 
 
 The query URL for this subgraph is:
