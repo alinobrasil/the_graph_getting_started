@@ -2,6 +2,8 @@
 
 Getting historical data on a smart contract can be frustrating when building a dapp. [The Graph](https://thegraph.com/) provides an easy way to query smart contract data through APIs known as subgraphs. The Graph’s infrastructure relies on a decentralized network of indexers, enabling your dapp to become truly decentralized.
 
+Both Etherlink Mainnet & Testnet are supported by The Graph. 
+
 ## Quick Start
 
 These subgraphs only take a few minutes to set up. To get started, follow these three steps:
