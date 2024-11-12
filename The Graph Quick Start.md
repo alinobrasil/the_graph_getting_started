@@ -44,7 +44,14 @@ You’ll be prompted to provide some info on your subgraph like this:
 ![cli sample](https://lh7-us.googleusercontent.com/docsz/AD_4nXdTAUsUb5vbs3GtCrhKhuXM1xYoqqooYTxw6lfJfYtLJNP8GKVOhTPmjxlM1b6Qpx-pXNVOzRuc8BL12wZXqy4MIj8ja0tp15znfuJD_Mg84SSNj3JpQ4d31lNTxPYnpba4UOzZx8pmgOIsbI7vCz70v9gC?key=fnI6SyFgXU9SZRNX5C5vPQ)
 
 
-Simply have your contract verified on the block explorer and the CLI will automatically obtain the ABI and set up your subgraph. The default settings will generate an entity for each event.
+After entering the contract info, the graph-cli will attempt to fetch ABI, StartBLock & Contract name from the blockexplorer API. 
+
+If these aren't imported automatically, here's how to prepare them manually:
+  ![Specify ABI in CLI](img/cli-specify-abi.png)
+1. ABI: save the contract's ABI as a json file in the same folder where you're running graph init. Then simply input the filename in the cli with no quotes
+2. Start Block: Enter the block where your contract was created. You can look this up in the block explorer in the transaction where the contract was created. 
+3. Contract Name: If you're only indexing 1 smart contract, it's safe to go with the default name, `Contract`. Otherwise input the name of the contract as defined in its solidity source code.
+
 
 ## 2. Deploy & Publish
 
