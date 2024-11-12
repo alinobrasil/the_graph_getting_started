@@ -10,10 +10,6 @@ These subgraphs only take a few minutes to set up. To get started, follow these 
 2. Deploy & Publish
 3. Query from your dapp
 
-Pricing:
- - The rate-limited test endpoints in Studio are free.
- - API calls for the decentralized network are pay-per-use at $4 per 100K queries. **The first 100K queries are free!**
-
 Here’s a step by step walk through:
 
 ## 1. Initialize your subgraph project
