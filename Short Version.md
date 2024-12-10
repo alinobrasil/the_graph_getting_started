@@ -1,12 +1,10 @@
-# The Graph 
+# The Graph
 
-[The Graph](https://thegraph.com/) provides an easy way to query smart contract data through APIs known as subgraphs. The Graph’s infrastructure relies on a decentralized network of indexers, enabling your dapp to become truly decentralized.
+[The Graph](https://thegraph.com/) is an indexing protocol that provides an easy way to query blockchain data through decentralized APIs known as subgraphs. 
 
-## Quick Start
+With The Graph, developers can benefit from:
+ - Decentralized Indexing: Enables indexing blockchain data through multiple indexers, thus eliminating any single point of failure
+ - GraphQL Queries: Provides a powerful GraphQL interface for querying indexed data, making data retrieval super simple.
+ - Customization: Define your own logic for transforming & storing blockchain data. Reuse subgraphs published by other developers on The Graph Network.
 
-These subgraphs only take a few minutes to set up by going through these major steps:
-1. Initialize your subgraph project
-2. Deploy & Publish
-3. Query from your dapp
-
-Visit this [quick start guide](https://thegraph.com/docs/en/quick-start/) to see the full details. 
+Follow this [quick-start](https://thegraph.com/docs/en/quick-start/) guide to create, deploy, and query a subgraph within 5 minutes.
