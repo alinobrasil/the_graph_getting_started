@@ -80,13 +80,11 @@ Once your subgraph is ready to be put into production, you can publish it to the
 ![publish button](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-button.webp)
 
 
-Before you can query your subgraph, Indexers need to begin serving queries on it. In order to streamline this process, you can curate your own subgraph using GRT.
-
-When publishing, you’ll see the option to curate your subgraph. As of May 2024, it is recommended that you curate your own subgraph with at least 3,000 GRT to ensure that it is indexed and available for querying as soon as possible.
+You'll need some ETH on Arbitrum One to create an on-chain transaction. The Graph's smart contracts are all on Arbitrum One, even if your subgraph is indexing data from another chain.
 
 ![Publish screen](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-modal.png)
 
-> **Note:** The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Ethereum, BSC or any other [supported chain](https://thegraph.com/docs/en/developing/supported-networks/). 
+> **Note:** When publishing, a "Partial Indexer Support" alert means subgraphs on this chain are indexed by The Graph's default indexer but not by independent indexers. Testnets always have this limitation. For mainnets, this warning will go away after a voting process enables indexer rewards for the chain, at which point you can attract multiple indexers to your subgraph. 
 
 ## 3. Query your Subgraph
 
