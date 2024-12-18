@@ -20,12 +20,12 @@ Here’s a step by step walk through:
 
 Go to the [Subgraph Studio](https://thegraph.com/studio/) and connect your wallet. Once your wallet is connected, you can begin by clicking “Create a Subgraph”. When choosing a name, it is recommended to use Title Case: “Subgraph Name Chain Name.”
 
-![Create a Subgraph](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-create-subgraph.png)
+![Create a Subgraph](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/lens/img/studio-create-subgraph.png)
 
 
 You will then land on your subgraph’s page. All the CLI commands you need will be visible on the right side of the page:
 
-![CLI commands](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-graphcli-commands.png)
+![CLI commands](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/lens/img/studio-graphcli-commands.png)
 
 
 ### Install the Graph CLI⁠
@@ -43,7 +43,7 @@ graph init --studio <SUBGRAPH_SLUG>
 ```
 You’ll be prompted to provide some info on your subgraph like this:
 
-![cli sample](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/cli-sample.png)
+![cli sample](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/lens/img/cli-sample.webp)
 
 
 After entering the contract info, the graph-cli will attempt to fetch ABI, StartBLock & Contract name from the blockexplorer API. 
@@ -81,38 +81,30 @@ You will be asked for a version label. You can enter something like v0.0.1, but 
 
 You can test your subgraph by making a sample query in the playground section. The Details tab will show you an API endpoint. You can use that endpoint to test from your dapp.
 
-![Playground](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-playground.png)
+![Playground](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/lens/img/studio-playground.png)
 
 
 ### Publish Your Subgraph to The Graph’s Decentralized Network
 
 Once your subgraph is ready to be put into production, you can publish it to the decentralized network. On your subgraph’s page in Subgraph Studio, click on the Publish button:
 
-![publish button](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-button.webp)
+![publish button](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/lens/img/studio-publish-button.png)
 
 
-Before you can query your subgraph, Indexers need to begin serving queries on it. In order to streamline this process, you can curate your own subgraph using GRT.
+You'll need some ETH on Arbitrum One to create an on-chain transaction. The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Lens. 
 
-When publishing, you’ll see the option to curate your subgraph. As of May 2024, it is recommended that you curate your own subgraph with at least 3,000 GRT to ensure that it is indexed and available for querying as soon as possible.
 
-![Publish screen](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-modal.png)
-
-> **Note:** The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Ethereum, BSC or any other [supported chain](https://thegraph.com/docs/en/developing/supported-networks/). 
 
 ## 3. Query your Subgraph
 
-Congratulations! You can now query your subgraph on the decentralized network!
+Congratulations! You can now query your subgraph on the decentralized network! Here's the published subgraph from the example above: https://thegraph.com/explorer/subgraphs/8BpaJFWEBQYjUmi8ToJA9RChPPut2A4GCXpBgSJRtdBv?view=Query&chain=arbitrum-one
 
-For any subgraph on the decentralized network, you can start querying it by passing a GraphQL query into the subgraph’s query URL which can be found at the top of its Explorer page.
+For any subgraph on the decentralized network, you can start querying it by passing a GraphQL query into the subgraph’s query URL which can be found at the top of its Explorer page:
 
-Here’s an example from the [CryptoPunks Ethereum subgraph](https://thegraph.com/explorer/subgraphs/HdVdERFUe8h61vm2fDyycHgxjsde5PbB832NHgJfZNqK) by Messari:
-
-![Query URL](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/explorer-query-url.png)
+![Query URL](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/lens/img/explorer-lensMytoken-query-url.png)
 
 
-The query URL for this subgraph is:
-
-`https://gateway-arbitrum.network.thegraph.com/api/`**[api-key]**`/subgraphs/id/HdVdERFUe8h61vm2fDyycgxjsde5PbB832NHgJfZNqK`
+`https://gateway.thegraph.com/api/`**[api-key]**`/subgraphs/id/8BpaJFWEBQYjUmi8ToJA9RChPPut2A4GCXpBgSJRtdBv`
 
 Now, you simply need to  fill in your own API Key to start sending GraphQL queries to this endpoint.
 
@@ -124,6 +116,13 @@ Now, you simply need to  fill in your own API Key to start sending GraphQL quer
 In Subgraph Studio, you’ll see the “API Keys” menu at the top of the page. Here you can create API Keys.
 
 ## Appendix
+
+### Example from an Ethereum Subgraph on the Decentralized Network
+
+Here’s an example from the [CryptoPunks Ethereum subgraph](https://thegraph.com/explorer/subgraphs/HdVdERFUe8h61vm2fDyycHgxjsde5PbB832NHgJfZNqK) by Messari:
+
+![Query URL](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/explorer-query-url.png)
+
 
 ### Sample Query
 
@@ -154,11 +153,13 @@ Passing this into the query URL returns this result:
         "tokenId": "5822"
       },
 //      ...
+    ]
+  }
+}
 ```
 
 <aside>
 💡 Trivia: Looking at the top sales on [CryptoPunks website](https://cryptopunks.app/cryptopunks/topsales) it looks like the top sale is Punk #5822, not #9998. Why? Because they censor the flash-loan sale that happened.
-
 </aside>
 
 ### Sample code
@@ -166,13 +167,16 @@ Passing this into the query URL returns this result:
 ```jsx
 const axios = require('axios');
 
+//your graphql query
 const graphqlQuery = `{
   trades(orderBy: priceETH, orderDirection: desc) {
     priceETH
     tokenId
   }
 }`;
-const queryUrl = 'https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/HdVdERFUe8h61vm2fDyycHgxjsde5PbB832NHgJfZNqK'
+
+//query URL obtained from subgraph's explorer page
+const queryUrl = 'https://gateway.network.thegraph.com/api/[api-key]/subgraphs/id/HdVdERFUe8h61vm2fDyycHgxjsde5PbB832NHgJfZNqK'
 
 const graphQLRequest = {
   method: 'post',
@@ -191,7 +195,6 @@ axios(graphQLRequest)
 
   })
   .catch((error) => {
-    // Handle any errors
     console.error(error);
   });
 ```
