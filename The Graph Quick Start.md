@@ -93,6 +93,10 @@ Once your subgraph is ready to be put into production, you can publish it to the
 
 You'll need some ETH on Arbitrum One to create an on-chain transaction. The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Lens. 
 
+![Publish Modal](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/lens/img/studio-publish-modal.png)
+
+Note: When publishing, you might see a "Partial Indexer Support" alert. This means the network's subgraphs will be indexed by The Graph's default indexer, but won’t be served by independent indexers on The Graph Network. Testnets will always have this limitation. Lens Mainnet subgraphs will soon be able to attract additional indexers once a voting process on The Graph Network is completed. This will unlock indexer rewards, incentivizing independent indexers to support the subgraphs. At that point, the "Partial Indexer Support" warning will no longer appear.
+
 
 
 ## 3. Query your Subgraph
