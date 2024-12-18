@@ -2,6 +2,8 @@
 
 Getting historical data on a smart contract can be frustrating when building a dapp. [The Graph](https://thegraph.com/) provides an easy way to query smart contract data through APIs known as subgraphs. The Graph’s infrastructure relies on a decentralized network of indexers, enabling your dapp to become truly decentralized.
 
+Lumia is supported by The Graph!
+
 ## Quick Start
 
 These subgraphs only take a few minutes to set up. To get started, follow these three steps:
@@ -23,7 +25,7 @@ Go to the [Subgraph Studio](https://thegraph.com/studio/) and connect your walle
 
 You will then land on your subgraph’s page. All the CLI commands you need will be visible on the right side of the page:
 
-![CLI commands](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-graphcli-commands.png)
+![CLI commands](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/lumia/img/studio-cli-commands.webp)
 
 
 ### Install the Graph CLI⁠
@@ -41,7 +43,7 @@ graph init --studio <SUBGRAPH_SLUG>
 ```
 You’ll be prompted to provide some info on your subgraph like this:
 
-![cli sample](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/cli-sample.png)
+![cli sample](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/lumia/img/cli-sample.png)
 
 
 Simply have your contract verified on the block explorer and the CLI will automatically obtain the ABI and set up your subgraph. The default settings will generate an entity for each event.
@@ -53,7 +55,7 @@ Simply have your contract verified on the block explorer and the CLI will automa
 First run these commands:
 
 ```bash
-$ graph codegen
+$ graph codegend
 $ graph build
 ```
 
@@ -77,16 +79,14 @@ You can test your subgraph by making a sample query in the playground section. T
 
 Once your subgraph is ready to be put into production, you can publish it to the decentralized network. On your subgraph’s page in Subgraph Studio, click on the Publish button:
 
-![publish button](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-button.webp)
+![publish button](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/lumia/img/studio-publish-button.png)
 
 
-Before you can query your subgraph, Indexers need to begin serving queries on it. In order to streamline this process, you can curate your own subgraph using GRT.
+You'll need some ETH on Arbitrum One to create an on-chain transaction. The Graph's smart contracts are all on Arbitrum One, even if your subgraph is indexing data from Lumia or any other [supported chain](https://thegraph.com/docs/en/developing/supported-networks/). 
 
-When publishing, you’ll see the option to curate your subgraph. As of May 2024, it is recommended that you curate your own subgraph with at least 3,000 GRT to ensure that it is indexed and available for querying as soon as possible.
+![Publish screen](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/lumia/img/studio-publish-modal.png)
 
-![Publish screen](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-modal.png)
-
-> **Note:** The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Ethereum, BSC or any other [supported chain](https://thegraph.com/docs/en/developing/supported-networks/). 
+> **Note:** When publishing, you might see a "Partial Indexer Support" alert. This means the network's subgraphs will be indexed by The Graph's default indexer, but won’t be served by independent indexers on The Graph Network. Testnets will always have this limitation. Mainnet subgraphs will soon be able to attract additional indexers once a voting process on The Graph Network is completed. This will unlock indexer rewards, incentivizing other indexers to support the subgraphs. At that point, the "Partial Indexer Support" warning will no longer appear.
 
 ## 3. Query your Subgraph
 
