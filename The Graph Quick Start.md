@@ -99,7 +99,7 @@ Here’s an example from the [CryptoPunks Ethereum subgraph](https://thegraph.co
 
 The query URL for this subgraph is:
 
-`https://gateway-arbitrum.network.thegraph.com/api/`**[api-key]**`/subgraphs/id/HdVdERFUe8h61vm2fDyycgxjsde5PbB832NHgJfZNqK`
+`https://gateway.network.thegraph.com/api/`**[api-key]**`/subgraphs/id/HdVdERFUe8h61vm2fDyycgxjsde5PbB832NHgJfZNqK`
 
 Now, you simply need to  fill in your own API Key to start sending GraphQL queries to this endpoint.
 
@@ -159,7 +159,7 @@ const graphqlQuery = `{
     tokenId
   }
 }`;
-const queryUrl = 'https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/HdVdERFUe8h61vm2fDyycHgxjsde5PbB832NHgJfZNqK'
+const queryUrl = 'https://gateway.network.thegraph.com/api/[api-key]/subgraphs/id/HdVdERFUe8h61vm2fDyycHgxjsde5PbB832NHgJfZNqK'
 
 const graphQLRequest = {
   method: 'post',
