@@ -77,7 +77,7 @@ You can test your subgraph by making a sample query in the playground section. T
 
 Once your subgraph is ready to be put into production, you can publish it to the decentralized network. On your subgraph’s page in Subgraph Studio, click on the Publish button:
 
-![publish button](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-button.webp)
+![publish button](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-button.png)
 
 
 You'll need some ETH on Arbitrum One to create an on-chain transaction. The Graph's smart contracts are all on Arbitrum One, even if your subgraph is indexing data from another chain.
