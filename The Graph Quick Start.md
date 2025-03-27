@@ -23,7 +23,7 @@ Go to the [Subgraph Studio](https://thegraph.com/studio/) and connect your walle
 
 You will then land on your subgraph’s page. All the CLI commands you need will be visible on the right side of the page:
 
-![CLI commands](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-graphcli-commands.png)
+![CLI commands](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/zetachain/img/studio-graphcli-commands.png)
 
 
 ### Install the Graph CLI⁠
@@ -41,10 +41,10 @@ graph init --studio <SUBGRAPH_SLUG>
 ```
 You’ll be prompted to provide some info on your subgraph like this:
 
-![cli sample](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/cli-sample.png)
+![cli sample](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/zetachain/img/cli-sample.png)
 
 
-Simply have your contract verified on the block explorer and the CLI will automatically obtain the ABI and set up your subgraph. The default settings will generate an entity for each event.
+Simply have your contract verified on the block explorer and the CLI will automatically obtain the ABI and set up your subgraph. If it fails to fetch ABI or other info, simply retrying will usually resolve the problem. 
 
 ## 2. Deploy & Publish
 
@@ -70,19 +70,19 @@ You will be asked for a version label. You can enter something like v0.0.1, but 
 
 You can test your subgraph by making a sample query in the playground section. The Details tab will show you an API endpoint. You can use that endpoint to test from your dapp.
 
-![Playground](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-playground.png)
+![Playground](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/zetachain/img/studio-playground.png)
 
 
 ### Publish Your Subgraph to The Graph’s Decentralized Network
 
 Once your subgraph is ready to be put into production, you can publish it to the decentralized network. On your subgraph’s page in Subgraph Studio, click on the Publish button:
 
-![publish button](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-button.png)
+![publish button](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/zetachain/img/studio-publish-button.png)
 
 
 You'll need some ETH on Arbitrum One to create an on-chain transaction. The Graph's smart contracts are all on Arbitrum One, even if your subgraph is indexing data from another chain.
 
-![Publish screen](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-modal.png)
+![Publish screen](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/zetachain/img/studio-publish-modal.png)
 
 > **Note:** When publishing, a "Partial Indexer Support" alert means subgraphs on this chain are indexed by The Graph's default indexer but not by independent indexers. Testnets always have this limitation. For mainnets, this warning will go away after a voting process enables indexer rewards for the chain, at which point you can attract multiple indexers to your subgraph. 
 
