@@ -23,7 +23,7 @@ Go to the [Subgraph Studio](https://thegraph.com/studio/) and connect your walle
 
 You will then land on your subgraph’s page. All the CLI commands you need will be visible on the right side of the page:
 
-![CLI commands](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-graphcli-commands.png)
+![CLI commands](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/monad/img/studio-graphcli-commands.png)
 
 
 ### Install the Graph CLI⁠
@@ -41,10 +41,12 @@ graph init --studio <SUBGRAPH_SLUG>
 ```
 You’ll be prompted to provide some info on your subgraph like this:
 
-![cli sample](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/cli-sample.png)
+![cli sample](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/monad/img/cli-sample.png)
 
 
 Simply have your contract verified on the block explorer and the CLI will automatically obtain the ABI and set up your subgraph. The default settings will generate an entity for each event.
+
+If the block explorer fails to fetch ABI & Start Block automatically, you can [supply them manually](https://edgeandnode.notion.site/How-to-supply-ABI-manually-Monad-1dc8686fc7c2801d87b5f5b6337fc1ed?pvs=4). 
 
 ## 2. Deploy & Publish
 
@@ -77,12 +79,12 @@ You can test your subgraph by making a sample query in the playground section. T
 
 Once your subgraph is ready to be put into production, you can publish it to the decentralized network. On your subgraph’s page in Subgraph Studio, click on the Publish button:
 
-![publish button](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-button.webp)
+![publish button](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/monad/img/studio-publish-button.png)
 
 
 You'll need some ETH on Arbitrum One to create an on-chain transaction. The Graph's smart contracts are all on Arbitrum One, even if your subgraph is indexing data from another chain.
 
-![Publish screen](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/main/img/studio-publish-modal.png)
+![Publish screen](https://raw.githubusercontent.com/alinobrasil/the_graph_getting_started/refs/heads/monad/img/studio-publish-modal.png)
 
 > **Note:** When publishing, a "Partial Indexer Support" alert means subgraphs on this chain are indexed by The Graph's default indexer but not by independent indexers. Testnets always have this limitation. For mainnets, this warning will go away after a voting process enables indexer rewards for the chain, at which point you can attract multiple indexers to your subgraph. 
 
